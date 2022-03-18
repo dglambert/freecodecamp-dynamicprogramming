@@ -1,4 +1,4 @@
-//import fib from './fib.js';
+import fib from './fib.ts';
 
 describe('My Test Suite', () => {
     it('fib_6_Returns8', () => {
