@@ -13,8 +13,4 @@ function memoizedFib(n: number, memo: any) : number {
     return memo[n];
 }
     
-// TODO: convert these to test cases 
-console.log(fib(6));
-console.log(fib(7));
-console.log(fib(8));
-console.log(fib(50));
+export default fib;
