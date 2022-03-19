@@ -1,7 +1,7 @@
 
 
 function fib(n: number) : number {
-    var memo = {};
+    const memo = {};
     return memoizedFib(n, memo);
     //return fibWithOutMemoization(n);
 }
