@@ -11,10 +11,10 @@
     },
     "scripts": {
         "lint": "npx eslint .",
-        "build": "npm run lint && npx tsc",
+        "test": "jest --coverage",
+        "build": "npm run lint && npm run test && npx tsc",
         "run": "node .\\dist\\main.js",
         "buildandrun": "npm run build && npm run run",
-        "test": "jest --coverage",
         "test:watch": "jest --watch"
     }
 }
