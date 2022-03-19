@@ -1,8 +1,11 @@
 
-function fib(n: number) : number {
-    const memo: IHash = {};
-    return memoizedFib(n, memo);
-    //return fibWithOutMemoization(n);
+export function fib(n: number, algorithmOption: AlgorithmOption) : number {
+    
+    if(algorithmOption == AlgorithmOption.Memoized) {        
+        const memo: IHash = {};
+        return memoizedFib(n, memo);
+    }
+    return fibWithOutMemoization(n);
 }
 
 function memoizedFib(n: number, memo: IHash) : number {
@@ -21,5 +24,7 @@ export interface IHash {
     [details: number] : number;
 } 
 
-
-export default fib;
+export enum AlgorithmOption {
+    default,
+    Memoized
+}

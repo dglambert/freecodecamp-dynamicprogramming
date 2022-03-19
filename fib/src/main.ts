@@ -1,3 +1,4 @@
-import fib from './fib'
+import {fib, AlgorithmOption} from './fib';
 
-console.log(fib(50));
+
+console.log(fib(50, AlgorithmOption.Memoized));
