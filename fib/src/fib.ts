@@ -1,13 +1,11 @@
 
-
 function fib(n: number) : number {
-    const memo = {};
+    const memo: IHash = {};
     return memoizedFib(n, memo);
     //return fibWithOutMemoization(n);
 }
 
-
-function memoizedFib(n: number, memo: any) : number {
+function memoizedFib(n: number, memo: IHash) : number {
     if(n in memo) return memo[n];
     if(n <= 2) return 1;
     memo[n] = memoizedFib(n-1, memo) + memoizedFib(n-2, memo);
@@ -19,4 +17,9 @@ function fibWithOutMemoization(n: number) : number {
     return fibWithOutMemoization(n-1) + fibWithOutMemoization(n-2);
 }
     
+export interface IHash {
+    [details: number] : number;
+} 
+
+
 export default fib;
