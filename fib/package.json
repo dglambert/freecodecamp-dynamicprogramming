@@ -2,6 +2,9 @@
     "devDependencies": {
         "@tsconfig/node16": "^1.0.2",
         "@types/jest": "^27.4.1",
+        "@typescript-eslint/eslint-plugin": "^5.15.0",
+        "@typescript-eslint/parser": "^5.15.0",
+        "eslint": "^8.11.0",
         "jest": "^27.5.1",
         "ts-jest": "^27.1.3",
         "typescript": "^4.6.2"
@@ -9,7 +12,7 @@
     "scripts": {
         "build": "npx tsc",
         "run": "node .\\dist\\main.js",
-        "buildandrun": "npm run build && npm run run", 
+        "buildandrun": "npm run build && npm run run",
         "test": "jest --coverage",
         "test:watch": "jest --watch"
     }
