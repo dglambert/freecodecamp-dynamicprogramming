@@ -7,6 +7,9 @@
         "typescript": "^4.6.2"
     },
     "scripts": {
+        "build": "npx tsc",
+        "run": "node .\\dist\\main.js",
+        "buildandrun": "npm run build && npm run run", 
         "test": "jest --coverage",
         "test:watch": "jest --watch"
     }
