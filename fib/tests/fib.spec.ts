@@ -1,3 +1,5 @@
+/// <reference types="@types/jest" />
+
 import fib from '../src/fib';
 
 describe('My Test Suite', () => {
