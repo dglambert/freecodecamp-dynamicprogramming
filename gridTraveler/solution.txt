@@ -1,0 +1,102 @@
+L - Listen
+E - Example
+B - Brute Force
+O - Optimize
+W - Walk Through
+I - Implement
+T - Test
+
+Listen 
+------
+n/a
+
+Example 
+------
+
+
+   1   2   
+   ---------
+1  | 2 | 1 |
+   ---------
+2  | 1 | 0 |
+   ---------
+
+
+   1   2   3   
+   -------------
+1  | 6 | 3 | 2 |
+   -------------
+2  | 3 | 2 | 1 |
+   -------------
+3  | 2 | 1 | 0 |
+   -------------
+
+
+   1   2   3   4   5   6   7   8
+   ---------------------------------
+1  |   |   |   |   |   |   |   |   |
+   ---------------------------------
+2  |   |   |   |   |   |   |   |   |
+   ---------------------------------
+3  |   |   |   |   |   |   |   |   |
+   ---------------------------------
+4  |   |   |   |   |   |   |   |   |
+   ---------------------------------
+5  |   |   |   |   |   |   |   |   |
+   ---------------------------------
+6  |   |   |   |   |   |   |   |   |
+   ---------------------------------
+7  |   |   |   |   |   |   |   |   |
+   ---------------------------------
+8  |   |   |   |   |   |   |   |   |
+   ---------------------------------
+   
+
+Brute Force 
+------
+
+
+// gridTraveler_numberOfRowsIs0_Returns-1
+// gridTraveler_numberOfColumnsIs0_Returns-1
+// gridTraveler_numberOfRowsIs1ANDnumberOfColumnsIs1_Returns0
+
+// gridTraveler_numberOfRowsIs1ANDnumberOfColumnsIs2_Returns1
+// gridTraveler_numberOfRowsIs2ANDnumberOfColumnsIs1_Returns1
+
+// gridTraveler_numberOfRowsIs1ANDnumberOfColumnsIs3_Returns1
+// gridTraveler_numberOfRowsIs3ANDnumberOfColumnsIs1_Returns1
+
+// gridTraveler_numberOfRowsIs2ANDnumberOfColumnsIs2_Returns2
+
+// gridTraveler_numberOfRowsIs2ANDnumberOfColumnsIs3_Returns3
+// gridTraveler_numberOfRowsIs3ANDnumberOfColumnsIs2_Returns3
+
+// gridTraveler_numberOfRowsIs3ANDnumberOfColumnsIs3_Returns6
+
+
+gridTraveler(numberOfRows, numberOfColumns)
+{
+    numberOfPaths = 0;
+    
+    if(numberOfRows <= 0 OR numberOfColumns  <= 0 )
+        return -1;
+
+    if(numberOfRows == 1 AND numberOfColumns == 1)
+    {
+        return 1;
+    }
+
+    if(numberOfRows > 1)
+    {
+        numberOfPaths = numberOfPaths + gridTraveler(numberOfRows-1, numberOfColumns);
+    }
+
+    if(numberOfColumns > 1)
+    {
+        numberOfPaths = numberOfPaths + gridTraveler(numberOfRows, numberOfColumns-1)  
+    }
+
+
+    return numberOfPaths;
+}
+
