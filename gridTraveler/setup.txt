@@ -13,3 +13,8 @@ run file once w/ node gridTraveler.js
 del gridTraveler.js
 commit 
 
+cd ..
+npm install --save-dev jest
+mkdir tests
+cd tests 
+touch gridTraveler.spec.ts
