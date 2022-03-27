@@ -46,4 +46,16 @@ add dist to .gitignore if not already added
 test build w/ npx tsc 
 commit 
 
+npm install --save-dev eslint 
+ALSO read more from source here -- https://blog.appsignal.com/2022/01/19/how-to-set-up-a-nodejs-project-with-typescript.html
+touch .eslintrc.js
+npm install --save-dev @typescript-eslint/parser
+npm install --save-dev @typescript-eslint/eslint-plugin
+copy in contents for .eslintrc.js from previous project or above source link
+test w/ npx eslint .
+add lint script to package.json
+test w/ npm run lint
+commit 
+
+
 
