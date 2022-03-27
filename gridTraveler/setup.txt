@@ -151,3 +151,9 @@ no implementation updates required
 npm run buildandrun
 no issues
 commit
+
+adding 9th test for 3,3 returns 6
+no implementation updates required
+npm run buildandrun
+no issues
+commit
