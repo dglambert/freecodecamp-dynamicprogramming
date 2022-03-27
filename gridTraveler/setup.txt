@@ -18,3 +18,17 @@ npm install --save-dev jest
 mkdir tests
 cd tests 
 touch gridTraveler.spec.ts
+add simple true equals true tests
+run test w/ npx jest 
+commit 
+
+cd ..
+cd src
+touch main.ts
+cut console.log gridTraveler call from gridTraveler.ts, paste into main.ts 
+add export keyword to gridTraveler() 
+add import to main.ts - import {gridTraveler} from './gridTraveler';
+test build w/ npx tsc main.ts
+test run w/ node main.ts 
+del main.js
+commit 
