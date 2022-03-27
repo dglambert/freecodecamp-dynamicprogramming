@@ -83,4 +83,23 @@ test in split terminal window npm run test:watch
 make a change to gridTraveler.spec.ts, observe test are automatically reran in new split terminal window 
 commit 
 
+implement first actual test cases - gridTraveler_numberOfRowsIs0_Returns-1
+add import to gridTraveler.spec.ts - import {gridTraveler} from '../src/gridTraveler';
+observe test are failing in the test:watch terminal window 
+-- error is due to further typescript configuration needed
+--     Jest encountered an unexpected token
+--         ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){import { gridTraveler } from '../src/gridTraveler';
+--     SyntaxError: Cannot use import statement outside a module
+See source: https://jestjs.io/docs/getting-started#using-typescript-via-ts-jest
+npm install --save-dev ts-jest
+npm install --save-dev @types/jest
+touch jest.config.js 
+copy in content from previous project
+this fixed test via 'npm run buildandrun', but did not fix via test:watch window
+fix failing test due to returns 2, but expected -2, by implemneting base case for if numberOfColumns or numberOfRows == 0
+test w/ npm run buildandrun
+observe now passing 
+fixed issue with 
+
+
 
