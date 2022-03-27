@@ -74,5 +74,9 @@ add run script: node .\\dist\\main.js
 test w/ npm run run 
 commit 
 
+add buildandrunscript: npm run build && npm run run
+test w/ npm run buildandrun
+commit 
+
 
 
