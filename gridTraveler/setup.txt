@@ -61,7 +61,7 @@ add test script:  jest --coverage
 test w/ npm run test 
 commit
 
-add build script npm run lint && npm run test && npx tsc
+add build script: npm run lint && npm run test && npx tsc
 test w/ npm run build 
 observe failing due to error in js files 
 touch .eslintignore
@@ -69,5 +69,10 @@ add dist and **.*js so we don't get linting on js files
 fix lint warnings for unused variables in gridTraveler() by adding numberOfColumns and numberOfRows instead of returning 1; 
 test w/ npm run build
 commit 
+
+add run script: node .\\dist\\main.js
+test w/ npm run run 
+commit 
+
 
 
