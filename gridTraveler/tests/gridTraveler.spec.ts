@@ -26,6 +26,11 @@ describe('My Test Suite', () => {
     it('gridTraveler_numberOfRowsIs1ANDnumberOfColumnsIs3_Returns1', () => {
         expect(gridTraveler(1, 3)).toEqual(1);
       }); 
+    
+    it('gridTraveler_numberOfRowsIs3ANDnumberOfColumnsIs1_Returns1', () => {
+        expect(gridTraveler(3, 1)).toEqual(1);
+      });
 
+      
 
 });
