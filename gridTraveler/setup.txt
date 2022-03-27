@@ -74,9 +74,13 @@ add run script: node .\\dist\\main.js
 test w/ npm run run 
 commit 
 
-add buildandrunscript: npm run build && npm run run
+add buildandrun script: npm run build && npm run run
 test w/ npm run buildandrun
 commit 
 
+add test:watch script: jest --watch
+test in split terminal window npm run test:watch
+make a change to gridTraveler.spec.ts, observe test are automatically reran in new split terminal window 
+commit 
 
 
