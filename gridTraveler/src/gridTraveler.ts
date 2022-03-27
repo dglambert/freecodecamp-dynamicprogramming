@@ -1,5 +1,8 @@
 
 export function gridTraveler(numberOfRows: number, numberOfColumns: number) : number {
+    
+    let numberOfPaths = 0;
+    
     if(numberOfRows == 0 || numberOfColumns == 0){
         return -1;
     }
@@ -8,6 +11,11 @@ export function gridTraveler(numberOfRows: number, numberOfColumns: number) : nu
         return 1;
     }
 
-    return numberOfRows + numberOfColumns;
+    if(numberOfColumns > 1)
+    {
+        numberOfPaths = numberOfPaths + gridTraveler(numberOfRows, numberOfColumns-1);
+    }
+
+    return numberOfPaths;
 }
 
