@@ -99,7 +99,13 @@ this fixed test via 'npm run buildandrun', but did not fix via test:watch window
 fix failing test due to returns 2, but expected -2, by implemneting base case for if numberOfColumns or numberOfRows == 0
 test w/ npm run buildandrun
 observe now passing 
-fixed issue with 
+fixed issue in test:watch window by quiting w/ ctrl+c and restarting with npm run test:watch
+commit 
+
+adding second test 
+commit 
+
+
 
 
 
