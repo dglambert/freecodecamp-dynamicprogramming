@@ -11,6 +11,11 @@ export function gridTraveler(numberOfRows: number, numberOfColumns: number) : nu
         return 1;
     }
 
+    if(numberOfRows > 1)
+    {
+        numberOfPaths = numberOfPaths = gridTraveler(numberOfRows -1, numberOfColumns);
+    }
+
     if(numberOfColumns > 1)
     {
         numberOfPaths = numberOfPaths + gridTraveler(numberOfRows, numberOfColumns-1);
