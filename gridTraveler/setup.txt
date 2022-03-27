@@ -28,7 +28,10 @@ touch main.ts
 cut console.log gridTraveler call from gridTraveler.ts, paste into main.ts 
 add export keyword to gridTraveler() 
 add import to main.ts - import {gridTraveler} from './gridTraveler';
-test build w/ npx tsc main.ts
+build w/ npx tsc gridTraveler.ts
+build w/ npx tsc main.ts
 test run w/ node main.ts 
-del main.js
+rm main.js
+rm gridTraveler.js
 commit 
+
