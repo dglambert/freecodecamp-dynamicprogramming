@@ -132,3 +132,22 @@ npm run buildandrun
 no issues
 commit 
 
+updating lint script to fail on warnings
+commit 
+
+adding 8th test for 2,2 returns 2
+no implementation updates required
+npm run buildandrun
+no issues
+commit
+
+adding 9th test for 2,3 returns 3
+no implementation updates required
+npm run buildandrun
+no issues
+
+adding 8th test for 3,2 returns 3
+no implementation updates required
+npm run buildandrun
+no issues
+commit
