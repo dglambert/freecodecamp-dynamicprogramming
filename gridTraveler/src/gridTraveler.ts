@@ -4,7 +4,7 @@ export function gridTraveler(numberOfRows: number, numberOfColumns: number) : nu
     let numberOfPaths = 0;
     
     if(numberOfRows == 0 || numberOfColumns == 0){
-        return -1;
+        return 0;
     }
 
     if(numberOfRows == 1 && numberOfColumns == 1){
