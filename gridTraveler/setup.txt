@@ -2,3 +2,14 @@ cd ..
 mkdir gridTraveler
 cd gridTraveler
 touch setup.txt
+
+mkdir src
+npm install --save-dev typescript
+cd src
+touch gridTraveler.ts
+add method signature gridTraveler(numberOfRows: number, numberOfColumns: number) : number with simple returns 1, and call to method. 
+compile file once w/ npx tsc gridTraveler.ts
+run file once w/ node gridTraveler.js
+del gridTraveler.js
+commit 
+
