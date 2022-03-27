@@ -1,8 +1,6 @@
 
 export function gridTraveler(numberOfRows: number, numberOfColumns: number) : number {
-    
-    let numberOfPaths = 0;
-    
+        
     if(numberOfRows == 0 || numberOfColumns == 0){
         return 0;
     }
@@ -11,19 +9,10 @@ export function gridTraveler(numberOfRows: number, numberOfColumns: number) : nu
         return 1;
     }
 
-    if(numberOfRows > 1)
-    {
-        const coordinate = moveTravelerDown(numberOfRows, numberOfColumns);
-        numberOfPaths = numberOfPaths = gridTraveler(coordinate.row, coordinate.column);
-    }
-
-    if(numberOfColumns > 1)
-    {
-        const coordinate = moveTravelerRight(numberOfRows, numberOfColumns);
-        numberOfPaths = numberOfPaths + gridTraveler(coordinate.row, coordinate.column);
-    }
-
-    return numberOfPaths;
+    const movingDownCoordinate = moveTravelerDown(numberOfRows, numberOfColumns);
+    const movingRightCoordinate = moveTravelerRight(numberOfRows, numberOfColumns);
+    
+    return gridTraveler(movingDownCoordinate.row, movingDownCoordinate.column) + gridTraveler(movingRightCoordinate.row, movingRightCoordinate.column);
 }
 
 function moveTravelerDown(row: number, column: number) : Coordinate {
@@ -42,6 +31,5 @@ class Coordinate {
         this.row = row;
         this.column = column; 
         
-    }
-    
+    }    
 }
