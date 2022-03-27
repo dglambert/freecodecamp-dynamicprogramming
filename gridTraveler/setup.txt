@@ -35,3 +35,15 @@ rm main.js
 rm gridTraveler.js
 commit 
 
+cd ..
+npm install --save-dev @tsconfig\node16
+touch tsconfig.json
+copy in tsconfig from previous tsconfig.json
+ALSO read more from source here - https://blog.appsignal.com/2022/01/19/how-to-set-up-a-nodejs-project-with-typescript.html
+mkdir dist
+add "outDir": "dist" to compilerOptions in tsconfig
+add dist to .gitignore if not already added 
+test build w/ npx tsc 
+commit 
+
+
