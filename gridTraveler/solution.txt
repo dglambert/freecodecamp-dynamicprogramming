@@ -58,7 +58,7 @@ Brute Force
 
 // gridTraveler_numberOfRowsIs0_Returns-1
 // gridTraveler_numberOfColumnsIs0_Returns-1
-// gridTraveler_numberOfRowsIs1ANDnumberOfColumnsIs1_Returns0
+// gridTraveler_numberOfRowsIs1ANDnumberOfColumnsIs1_Returns1
 
 // gridTraveler_numberOfRowsIs1ANDnumberOfColumnsIs2_Returns1
 // gridTraveler_numberOfRowsIs2ANDnumberOfColumnsIs1_Returns1
