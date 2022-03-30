@@ -18,11 +18,11 @@ export class SimpleGridTraveler{
         return this.gridTraveler(movingDownCoordinate.row, movingDownCoordinate.column) + this.gridTraveler(movingRightCoordinate.row, movingRightCoordinate.column);
     }
     
-    moveTravelerDown(row: number, column: number) : Coordinate {
+    private moveTravelerDown(row: number, column: number) : Coordinate {
         return new Coordinate(row -1, column);
     }
     
-    moveTravelerRight(row: number, column: number) : Coordinate {
+    private moveTravelerRight(row: number, column: number) : Coordinate {
         return new Coordinate(row, column-1);
     }
 }
