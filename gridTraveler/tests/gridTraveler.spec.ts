@@ -47,5 +47,8 @@ describe('gridTraveler Test Suite', () => {
         expect(gridTraveler(3, 3)).toEqual(6);
       });
 
+    // it('gridTraveler_numberOfRowsIs18ANDnumberOfColumnsIs18_Returns2333606220', () => {
+    //     expect(gridTraveler(18, 18)).toEqual(2333606220);
+    //   });
 
 });
