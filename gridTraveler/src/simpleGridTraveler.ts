@@ -1,6 +1,7 @@
 import { Coordinate } from "./coordinate";
+import { gridTravelable } from "./gridTravelable";
 
-export class SimpleGridTraveler{
+export class SimpleGridTraveler implements gridTravelable{
     
     gridTraveler(numberOfRows: number, numberOfColumns: number) : number {
         
