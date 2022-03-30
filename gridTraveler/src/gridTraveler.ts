@@ -1,3 +1,4 @@
+import { Coordinate } from "./coordinate";
 
 export function gridTraveler(numberOfRows: number, numberOfColumns: number) : number {
         
@@ -21,15 +22,4 @@ function moveTravelerDown(row: number, column: number) : Coordinate {
 
 function moveTravelerRight(row: number, column: number) : Coordinate {
     return new Coordinate(row, column-1);
-}
-
-class Coordinate {
-    row: number;
-    column: number;
-
-    constructor(row: number, column: number) {
-        this.row = row;
-        this.column = column; 
-        
-    }    
 }
