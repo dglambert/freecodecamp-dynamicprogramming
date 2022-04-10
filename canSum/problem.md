@@ -14,7 +14,7 @@ You may assume that all input numbers are nonnegative.
 
 - **L** - Listen
 - **E** - Example
-- **B** - Bruteforce
+- **B** - Brute Force
 - **O** - Optimize
   - **BUD** 
     - **B** - Bottlenecks
@@ -30,7 +30,7 @@ You may assume that all input numbers are nonnegative.
 
 ### Listen 
 
-n/a
+Question: Are the elements of `numbers` unique?
 
 ### Example
 
@@ -75,4 +75,48 @@ n/a
 target: 7
 numbers: 2
 n/a
+```
+
+`canSum_targetIs70numbersAre2,3,4,5_ReturnsTrue`
+```
+target: 70
+numbers: 2,3,4,5
+70 = 5*14
+70 = 4*17+2
+70 = 3*22+4
+70 = 2*3
+...
+..
+.
+```
+
+
+### Brute Force
+
+```
+canSum(int targetNumber, int[] numbers)
+{
+    return canSum(targetNumber, numbers, 0);
+}
+
+canSum(int targetNumber, int[] numbers, int startIndex)
+{
+    for(let i = startIndex; i < numbers.length; i++;)
+    {
+        element = numbers[i];
+
+        if(element > targetNumber)
+        {
+            continue;
+        }
+
+        if(targetNumber % element == 0)
+        {
+            return true;    
+        }
+        /// ???
+        canSum(targetNumber, numbers, i+1);
+    }
+}
+
 ```
