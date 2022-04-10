@@ -2,7 +2,7 @@
 
 export function canSum(targetNumber: number, numbers: number[]) : boolean 
 {
-    return true;
+    return numbers[0] < targetNumber;
 }
 
 
