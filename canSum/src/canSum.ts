@@ -2,7 +2,7 @@
 
 export function canSum(targetNumber: number, numbers: number[]) : boolean 
 {
-    return numbers[0] == targetNumber;
+    return targetNumber % numbers[0]  === 0;
 }
 
 
