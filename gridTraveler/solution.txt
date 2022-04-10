@@ -9,6 +9,7 @@ T - Test
 Listen 
 ------
 n/a
+--- RETRO: I missread the original problem, and thought the goal was to calculate how many steps there were in each of the different routes, not how many routes.  
 
 Example 
 ------
