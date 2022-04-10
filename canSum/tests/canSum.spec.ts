@@ -1,7 +1,8 @@
+import {canSum} from '../src/canSum';
 
 describe('canSum Test Suite', () => {
 
-    it('true_equals_true_Returns_True', () => {
-        expect(true).toEqual(true);
+    it('canSum_targetIs21numbersAre21_ReturnsTrue', () => {
+        expect(canSum(21, [21])).toEqual(true);
       });
 });
