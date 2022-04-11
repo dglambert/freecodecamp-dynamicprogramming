@@ -2,20 +2,25 @@
 
 export function canSum(targetNumber: number, numbers: number[]) : boolean 
 {
-    let sum = 0;
+    if(targetNumber < 0)
+    {
+        return false;
+    }
+
     for(let i = 0; i < numbers.length; i++)
     {
-        if(targetNumber % numbers[i]  === 0)
-        {
-            return true;
-        }
-    
-        if(i > 0  && sum + numbers[i] === targetNumber)
-        {
-            return true;
-        }
-        sum = sum + numbers[i];
+        const newTargetNumber = targetNumber - numbers[i];
         
+        if(newTargetNumber === 0)
+        {
+            return true;
+        }
+
+        if( canSum(newTargetNumber, numbers) )
+        {
+            return true;
+        }
     }
+
     return false;
 }
