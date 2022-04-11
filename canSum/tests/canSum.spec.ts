@@ -29,5 +29,9 @@ describe('canSum Test Suite', () => {
     it('canSum_targetIs13numbersAre2_4_5_ReturnsFalse', () => {
         expect(canSum(13, [2, 4, 5])).toEqual(false);
       });
+    
+    it('canSum_targetIs7numbersAre2_3_ReturnsTrue', () => {
+        expect(canSum(7, [2, 3])).toEqual(true);
+      });
 
 });
