@@ -2,7 +2,7 @@
 
 export function canSum(targetNumber: number, numbers: number[]) : boolean 
 {
-    let sum: number = 0;
+    let sum = 0;
     for(let i = 0; i < numbers.length; i++)
     {
         if(targetNumber % numbers[i]  === 0)
