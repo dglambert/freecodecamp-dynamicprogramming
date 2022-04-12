@@ -2,25 +2,41 @@
 
 export function canSum(targetNumber: number, numbers: number[]) : boolean 
 {
+    const memo: IHash = {};
+    return memoizedCanSum(targetNumber, numbers, memo);
+}
+
+function memoizedCanSum(targetNumber: number, numbers: number[], memo: IHash) : boolean 
+{
+    if(targetNumber in memo)
+    {
+        return memo[targetNumber];
+    }
+
     if(targetNumber < 0)
     {
         return false;
     }
 
+    if(targetNumber === 0)
+    {
+        return true;
+    }
+
     for(let i = 0; i < numbers.length; i++)
     {
-        const newTargetNumber = targetNumber - numbers[i];
+        const remainder = targetNumber - numbers[i];
         
-        if(newTargetNumber === 0)
+        if( memoizedCanSum(remainder, numbers, memo) )
         {
-            return true;
-        }
-
-        if( canSum(newTargetNumber, numbers) )
-        {
+            memo[remainder] = true;
             return true;
         }
     }
-
+    memo[targetNumber] = false;
     return false;
 }
+
+interface IHash {
+    [details: number] : boolean;
+} 
