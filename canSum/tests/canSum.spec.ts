@@ -30,8 +30,12 @@ describe('canSum Test Suite', () => {
         expect(canSum(9, [2, 4, 5])).toEqual(true);
       });
 
-      it('canSum_targetIs7numbersAre2_3_ReturnsTrue', () => {
+    it('canSum_targetIs7numbersAre2_3_ReturnsTrue', () => {
         expect(canSum(7, [2, 3])).toEqual(true);
+      });
+
+    it('canSum_targetIs300numbersAre7_14_ReturnsFalse', () => {
+        expect(canSum(300, [7, 14])).toEqual(false);
       });
 
 });
