@@ -90,6 +90,33 @@ numbers: 2,3,4,5
 .
 ```
 
+`canSum_targetIs13numbersAre2,4,7_ReturnsTrue`
+```
+target: 13
+numbers: 2,4,7
+
+Tree representation
+
+// 13 [2, 4, 7]
+    //-2// 11
+        //-2// 9
+            //-2// 7
+            //-4// 5
+            //-7// 2
+        //-4// 7
+            //-2// 5
+            //-4// 3
+            //-7// 0 :: BASE_CASE:EQUALS_ZERO, return true 
+        //-7// 4
+    //-4// 9
+        //-2// 7
+        //-4// 5
+        //-7// 2
+    //-7// 6
+        //-2// 4
+        //-4// 2
+        //-7// -1 :: BASE_CASE:NEGATIVE_NUMBER, return false
+```
 
 ### Brute Force
 
