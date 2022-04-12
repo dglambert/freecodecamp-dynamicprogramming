@@ -1,3 +1,4 @@
+/// <reference types="@types/jest" />
 import {canSum} from '../src/canSum';
 
 describe('canSum Test Suite', () => {
