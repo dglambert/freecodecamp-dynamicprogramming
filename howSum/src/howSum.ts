@@ -10,5 +10,15 @@ function howSumWithTrace(targetSum: number, numbers: number[], usedNumbers: numb
         usedNumbers;
     }
 
+    
+    for(let i = 0; i < numbers.length; i++)
+    {
+        // /tempUsedNumbers = usedNumbers;
+        // need to figure list implementation for tempUsedNumbers
+        //tempUsedNumbers.Add(); 
+        //howSumWithTrace(targetSum, numbers, tempUsedNumbers);
+
+    }
+
     return null;
 }

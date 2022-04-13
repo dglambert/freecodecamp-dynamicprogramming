@@ -14,5 +14,10 @@ describe('howSum Test Suite', () => {
             expect(actualUsedNumbers.length).toEqual(0);
         }
     })
+
+    it('howSum_targetIs21numbersAre21_Returns21', () => {
+        expect(howSum(21, [21])).toEqual([21]);
+    });
+    
     
 });
