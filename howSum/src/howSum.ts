@@ -1,6 +1,5 @@
-function howSum(targetSum: number, numbers: number[]) : number[]
+export function howSum(targetSum: number, numbers: number[]) : number[]
 {
     return null;
 }
 
-console.log(howSum(1, []));
