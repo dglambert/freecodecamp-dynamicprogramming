@@ -1,5 +1,4 @@
-export function howSum(targetSum: number, numbers: number[]) : number[]
+export function howSum(targetSum: number, numbers: number[]) : number[] | null
 {
     return null;
 }
-
