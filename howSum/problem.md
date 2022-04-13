@@ -33,9 +33,23 @@ If there are multiple combinations possible, you may return any single one.
 - *"Any combination of elements that add up to exactly the `targetSum`."* - Does this mean I can reuse an element more thant once like in `canSum`?
     - ANSWER: Yes, duplicates are allowed.
 - *"If there are multiple combinations possible, you may retrun any single one."* - I do not need to worry about getting best one or sorting.  
-
+- Are negatives allowed?
 
 ### Examples
+
+`howSum_targetIs-1numbersAre1_ReturnsNull`
+```
+target: -1
+numbers: [1]
+returns null
+```
+
+`howSum_targetIs0numbersAre1_ReturnsEmptyArray`
+```
+target: 0
+numbers: [1]
+returns []
+```
 
 `howSum_targetIs21numbersAre21_Returns21`
 ```
@@ -80,4 +94,19 @@ howSum(targetSum: number, givenNumbers: number[], usedNumbers: number[])
 target: 5
 numbers: [2, 3, 7]
 5 = 2 + 3
+```
+
+### Brute Force 
+```
+howSum(targetSum: number, givenNumbers: number[], usedNumbers: number[])
+    if targetSum less than 0
+        return null
+    if targetSum equals zero
+        return usedNumbers        
+    foreach number in numbers
+        tempUsedNumbers = usedNumbers
+        add number to tempUsedNumbers
+        returnedNumbers = howSum(targetSum, givenNumbers, tempUsedNumbers)
+        if(returnedNumbers is not null)
+            return returnedNumbers
 ```
