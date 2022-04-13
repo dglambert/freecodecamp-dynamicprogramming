@@ -1,3 +1,4 @@
+/// <reference types="@types/jest" />
 import {howSum} from '../src/howSum';
 
 describe('howSum Test Suite', () => {
