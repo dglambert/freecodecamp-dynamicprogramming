@@ -1,7 +1,9 @@
+import {howSum} from '../src/howSum';
+
 describe('howSum Test Suite', () => {
 
-    it('true_equals_true', () => {
-        expect(true).toEqual(true);
+    it('howSum_targetIs-1numbersAre1_ReturnsNull', () => {
+        expect(howSum(-1, [1])).toEqual(null);
     });
     
 });
