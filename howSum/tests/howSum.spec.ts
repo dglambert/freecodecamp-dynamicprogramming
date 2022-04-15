@@ -26,4 +26,9 @@ describe('howSum Test Suite', () => {
     it('howSum_targetIs21numbersAre20_1_Returns20_1', () => {
         expect(howSum(21, [20,1])).toEqual([20,1]);
     });
+
+    it('howSum_targetIs5numbersAre2_3_7_Returns2_3', () => {
+        expect(howSum(5, [2,3,7])).toEqual([2,3]);
+    });
+
 });
