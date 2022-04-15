@@ -8,7 +8,7 @@ describe('howSum Test Suite', () => {
     });
 
     it('howSum_targetIs0numbersAre1_ReturnsEmptyArray', () => {
-        let actualUsedNumbers = howSum(0, [1]);
+        const actualUsedNumbers = howSum(0, [1]);
         if(actualUsedNumbers != null)
         {
             expect(actualUsedNumbers.length).toEqual(0);
@@ -17,7 +17,5 @@ describe('howSum Test Suite', () => {
 
     it('howSum_targetIs21numbersAre21_Returns21', () => {
         expect(howSum(21, [21])).toEqual([21]);
-    });
-    
-    
+    });    
 });
