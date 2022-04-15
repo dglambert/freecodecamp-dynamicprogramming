@@ -35,12 +35,12 @@ describe('howSum Test Suite', () => {
         expect(howSum(7, [2,4])).toEqual(null);
     });
 
-    // it('howSum_targetIs10000numbersAre1_ReturnsArrayLength10000,', () => {
-    //     const actualUsedNumbers = howSum(10000, [1]);
-    //     if(actualUsedNumbers != null)
-    //     {
-    //         expect(actualUsedNumbers.length).toEqual(10000);
-    //     }
-    // });
+    it('howSum_targetIs10000numbersAre1_ReturnsArrayLength10000,', () => {
+        const actualUsedNumbers = howSum(10000, [1]);
+        if(actualUsedNumbers != null)
+        {
+            expect(actualUsedNumbers.length).toEqual(10000);
+        }
+    });
 
 });
