@@ -1,32 +1,28 @@
 export function howSum(targetSum: number, numbers: number[]) : number[] | null
 {
-    return howSumWithTrace(targetSum, numbers, []);
+    return howSumWithTrace(targetSum, numbers);
 }
 
-function howSumWithTrace(targetSum: number, numbers: number[], usedNumbers: number[]): number[] | null
+function howSumWithTrace(targetSum: number, numbers: number[]): number[] | null
 {
     if(targetSum < 0)
     {
         return null;   
     }
+
     if(targetSum === 0)
     {
-        return usedNumbers;
+        return [];
     }
     
-    for(let i = 0; i < numbers.length; i++)
+    for(const number of numbers)
     {
-        const tempUsedNumbers: number[] = [];
-        usedNumbers.forEach(usedNumber => { 
-            tempUsedNumbers.push(usedNumber); // BOTTLENECK: Swap w/ List for better performance OR initialize array to usedNumbers.length + 1
-        });
-        tempUsedNumbers.push(numbers[i]); // BOTTLENECK: Swap w/ List for better performance OR initialize array to usedNumbers.length + 1 
-        const newTargetSum: number = targetSum - numbers[i];
-        const trace: number[] | null = howSumWithTrace(newTargetSum, numbers, tempUsedNumbers);
+        const remainder = targetSum - number;
+        const remainderResult: number[] | null = howSumWithTrace(remainder, numbers);
         
-        if(trace != null)
+        if(remainderResult !== null)
         {
-            return trace;
+            return [...remainderResult, number];
         }
     }
 
