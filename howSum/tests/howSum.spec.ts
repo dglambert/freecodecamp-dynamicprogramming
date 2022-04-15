@@ -31,6 +31,10 @@ describe('howSum Test Suite', () => {
         expect(howSum(5, [2,3,7])).toEqual([2,3]);
     });
 
+    it('howSum_targetIs7numbersAre2_4_ReturnsNull', () => {
+        expect(howSum(7, [2,4])).toEqual(null);
+    });
+
     it('howSum_targetIs10000numbersAre1_ReturnsArrayLength10000,', () => {
         const actualUsedNumbers = howSum(10000, [1]);
         if(actualUsedNumbers != null)
