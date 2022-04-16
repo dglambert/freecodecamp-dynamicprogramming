@@ -9,7 +9,17 @@ export function bestSum(targetSum: number, numbers: number[]) : number[] | null
     {
         return [];    
     }
+
+    for(let num of numbers)
+    {
+        let remainder = targetSum - num;
+        let remainderResult = bestSum(remainder, numbers);
+        if(remainderResult !== null)
+        {
+            return [...remainderResult, num];
+        } 
+    }
     
-    return numbers;
+    return null;
 }
 
