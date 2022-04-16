@@ -28,7 +28,8 @@ If there is a tie for the shortest combination, you may return any one of the sh
 
 ### Listen
 
-"Best" - May need to presort the incoming data structure for better performance.  
+- "Best" - May need to presort the incoming data structure for better performance.  
+- On seeing the tree drawing, if we use BFS, not DFS, then we can stop at the level we find a match. 
 
 ### Example
 
