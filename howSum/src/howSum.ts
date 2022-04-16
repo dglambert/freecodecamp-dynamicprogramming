@@ -1,10 +1,18 @@
+import { INumberedIndexNullableNumberArrayDictionary } from "./INumberedIndexNullableNumberArrayDictionary";
+
 export function howSum(targetSum: number, numbers: number[]) : number[] | null
 {
-    return howSumWithTrace(targetSum, numbers);
+    const dict: INumberedIndexNullableNumberArrayDictionary = {};
+    return memoizedHowSum(targetSum, numbers, dict);
 }
 
-function howSumWithTrace(targetSum: number, numbers: number[]): number[] | null
+function memoizedHowSum(targetSum: number, numbers: number[], memo: INumberedIndexNullableNumberArrayDictionary): number[] | null
 {
+    if(targetSum in memo)
+    {
+        return memo[targetSum];
+    }
+
     if(targetSum < 0)
     {
         return null;   
@@ -18,14 +26,15 @@ function howSumWithTrace(targetSum: number, numbers: number[]): number[] | null
     for(const number of numbers)
     {
         const remainder = targetSum - number;
-        const remainderResult: number[] | null = howSumWithTrace(remainder, numbers);
-        
+        const remainderResult: number[] | null = memoizedHowSum(remainder, numbers, memo);
+
         if(remainderResult !== null)
         {
-            return [...remainderResult, number];
+            memo[targetSum] = [...remainderResult, number];
+            return memo[targetSum];
         }
     }
-
+    memo[targetSum] = null;
     return null;
 }
 
