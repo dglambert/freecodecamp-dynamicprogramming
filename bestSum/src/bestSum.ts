@@ -10,6 +10,6 @@ export function bestSum(targetSum: number, numbers: number[]) : number[] | null
         return [];    
     }
     
-    return [...numbers, targetSum];
+    return numbers;
 }
 
