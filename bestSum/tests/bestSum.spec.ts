@@ -22,8 +22,16 @@ describe('bestSum Test Suite', () =>{
         expect(bestSum(7, [7,1])).toEqual([7]);
     });
 
-    it('bestSum_targetSumIs7AndnumbersAre1_7_Returns7', () => {
+    it('bestSum_targetIs7AndnumbersAre1_7_Returns7', () => {
         expect(bestSum(7, [1,7])).toEqual([7]);
+    });
+
+    it('bestSum_targetIs7AndnumbersAre5_3_4_7_Returns7', () => {
+        expect(bestSum(7, [5,3,4,7])).toEqual([7]);
+    });
+
+    it('bestSum_targetIs8AndnumbersAre2_3_5_Returns3_5', () => {
+        expect(bestSum(8, [2,3,5])).toEqual([3,5]);
     });
 
 });

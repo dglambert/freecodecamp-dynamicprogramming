@@ -20,11 +20,11 @@ export function bestSum(targetSum: number, numbers: number[]) : number[] | null
         {
             if(bestAvailableSum == null)
             {
-                bestAvailableSum = [...remainderResult, num];
+                bestAvailableSum = [num, ...remainderResult];
             }
             else if(remainderResult.length + 1 < bestAvailableSum.length)
             {
-                bestAvailableSum = [...remainderResult, num];
+                bestAvailableSum = [num, ...remainderResult];
             }
         } 
     }
