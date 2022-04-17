@@ -34,4 +34,12 @@ describe('bestSum Test Suite', () =>{
         expect(bestSum(8, [2,3,5])).toEqual([3,5]);
     });
 
+    it('bestSum_targetIs8AndnumbersAre1_4_5_Returns4_4', () => {
+        expect(bestSum(8, [1,4,5])).toEqual([4,4]);
+    });
+
+    it('bestSum_targetIs100AndnumbersAre1_2_5_25_Returns25_25_25_25', () => {
+        expect(bestSum(100, [1,2,5,25])).toEqual([25,25,25,25]);
+    });
+
 });
