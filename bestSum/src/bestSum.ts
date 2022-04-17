@@ -2,6 +2,8 @@
 export function bestSum(targetSum: number, numbers: number[]) : number[] | null
 {
     return bruteForceBestSum(targetSum, numbers);
+    //return bFSBestSum(targetSum, numbers);
+    
 }
 
 // m = targetSum 
@@ -44,3 +46,18 @@ function bruteForceBestSum(targetSum: number, numbers: number[]) : number[] | nu
     
     return bestAvailableSum;
 }
+
+
+// function bFSBestSum(targetSum: number, numbers: number[]) : number[] | null
+// {
+//     if(targetSum < 0)
+//     {
+//         return null
+//     }
+//     if(targetSum == 0)
+//     {
+//         return [];
+//     }
+    
+//     return null;
+// }
