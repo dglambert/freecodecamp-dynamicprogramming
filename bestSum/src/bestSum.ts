@@ -10,16 +10,25 @@ export function bestSum(targetSum: number, numbers: number[]) : number[] | null
         return [];    
     }
 
+    let bestAvailableSum: number[] | null = null;
+
     for(const num of numbers)
     {
         const remainder = targetSum - num;
-        const remainderResult = bestSum(remainder, numbers);
+        const remainderResult: (number[] | null) = bestSum(remainder, numbers);
         if(remainderResult !== null)
         {
-            return [...remainderResult, num];
+            if(bestAvailableSum == null)
+            {
+                bestAvailableSum = [...remainderResult, num];
+            }
+            else if(remainderResult.length + 1 < bestAvailableSum.length)
+            {
+                bestAvailableSum = [...remainderResult, num];
+            }
         } 
     }
     
-    return null;
+    return bestAvailableSum;
 }
 
