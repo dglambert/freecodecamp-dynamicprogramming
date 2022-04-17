@@ -98,5 +98,15 @@ If there is a tie for the shortest combination, you may return any one of the sh
 ```
 
 
+### Brute Force
+ see `bestSum.ts bruteForceBestSum()`
 
+ 
+ 
+ ### Optimize
+
+Given a O((n^m)*m) for `bruteForceBestSum()`, the focus is on the exponential time as notated by `^m`.
+
+1. On possible solution is to do BFS vs DFS, to limit the recursion.
+2. Another posible solutions is to Memoization. 
 
