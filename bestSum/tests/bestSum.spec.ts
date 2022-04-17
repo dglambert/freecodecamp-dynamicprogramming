@@ -22,4 +22,8 @@ describe('bestSum Test Suite', () =>{
         expect(bestSum(7, [7,1])).toEqual([7]);
     });
 
+    it('bestSum_targetSumIs7AndnumbersAre1_7_Returns7', () => {
+        expect(bestSum(7, [1,7])).toEqual([7]);
+    });
+
 });
