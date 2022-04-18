@@ -16,4 +16,8 @@ describe('canConstruct Test Suite', () => {
         expect(canConstruct('FooFoo', ['Foo'])).toEqual(true);
     });
 
+    it('canConstruct_targetIsFooBarAndwordsAreFoo_ReturnsFalse', () => {
+        expect(canConstruct('FooBar', ['Foo'])).toEqual(false);
+    });
+
 });
