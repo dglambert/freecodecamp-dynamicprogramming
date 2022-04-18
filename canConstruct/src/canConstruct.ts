@@ -1,6 +1,6 @@
 
 export function canConstruct(target: string, wordBank: string[]) : boolean
 {
-    return target in wordBank;
+    return target === wordBank[0];
 }
 

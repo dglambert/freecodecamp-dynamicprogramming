@@ -1,6 +1,11 @@
+/// <reference types="@types/jest" />
 
-describe('canConstruct Test Suite', () =>{
-    it('true_equals_true', () => {
-        expect(true).toEqual(true);
+import {canConstruct} from '../src/canConstruct';
+
+describe('canConstruct Test Suite', () => {
+
+    it('canConstruct_targetIsFooAndwordsAreFoo_ReturnsTrue', () => {
+        expect(canConstruct('foo', ['foo'])).toEqual(true);
     });
+
 });

@@ -25,3 +25,11 @@ You may reuse elements of `wordBank` as many times as needed.
 - **W** - Walkthrough
 - **I** - Implement
 - **T** - Test
+
+
+## Examples
+
+`canConstruct_targetIsFooAndwordsAreFoo_ReturnsTrue`
+
+
+
