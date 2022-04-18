@@ -27,9 +27,43 @@ You may reuse elements of `wordBank` as many times as needed.
 - **T** - Test
 
 
+## Listen
+
+
 ## Examples
 
 `canConstruct_targetIsFooAndwordsAreFoo_ReturnsTrue`
+```
+```
+
+`canConstruct_targetIsFooFooAndwordsAreFoo_ReturnsTrue`
+```
+```
+
+`canConstruct_targetIsFooBarAndwordsAreFoo_ReturnsFalse`
+```
+```
+
+`canConstruct_targetIsFooBarAndwordsAreFoo_Bar_ReturnsTrue`
+```
+```
+
+
+## Brute Force
+
+```
+canConstruct(target, wordBank)
+{
+    if(target.length == 0)
+        return ""
+
+    foreach word in wordbank
+        if(target contains word)
+            target = remove word in target
+            return canConstruct(target, wordBank)
+
+}
+```
 
 
 
