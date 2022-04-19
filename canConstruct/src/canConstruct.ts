@@ -35,7 +35,12 @@ function canConstructBruteForce(target: string, wordBank: string[]) : boolean
     return false;
 }
 
-
+// m = target.length
+// n = wordBank.length
+// time: O(n*m^2) // we loop through wordbank n times, however we only recurse at most m times, 
+    // because we do not pursue same elments twice due to memoization. 
+    // Additionally we have second m for copying the target string. 
+// space: O(m^2)
 function canConstructMemoized(target: string, wordBank: string[], memo: IStringIndexBooleanDictionary) : boolean
 {
     if(target in memo)
