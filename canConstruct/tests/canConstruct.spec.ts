@@ -28,4 +28,8 @@ describe('canConstruct Test Suite', () => {
         expect(canConstruct('skateboard', ['kate', 'sboard'])).toEqual(false);
     });
 
+    it('canConstruct_targetIsabcdefAndwordsAreab_abc_cd_def_abcd_ReturnsTrue', () => {
+        expect(canConstruct('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd'])).toEqual(true);
+    });
+
 });

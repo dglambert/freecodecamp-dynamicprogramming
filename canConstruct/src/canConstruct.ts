@@ -21,8 +21,11 @@ function canConstructBruteForce(target: string, wordBank: string[]) : boolean
     {
         if(target.indexOf(word) == 0)
         {
-            const newTarget = target.replace(word, "");
-            return canConstruct(newTarget, wordBank);
+            const suffix = target.replace(word, "");
+            if(canConstruct(suffix, wordBank))
+            {
+                return true;
+            }
         }
     }
     return false;
