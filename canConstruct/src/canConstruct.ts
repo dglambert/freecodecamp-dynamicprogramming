@@ -9,7 +9,7 @@ export function canConstruct(target: string, wordBank: string[]) : boolean
 // time: O(n^m) // we iterate the loop n times, but for each iteration we recurisvely call canConstruct till m is 0, so m is exponentials, so n^m
     // target.Replace is like copying an array, so we may need to account for this, we will copy m elements, 
     // O((n^m)*m) 
-// space: O(m) for the target?  
+// space: O(m^2) // m for the stack, multiplied m for suffix;   
 function canConstructBruteForce(target: string, wordBank: string[]) : boolean
 {
     if(target.length == 0)
