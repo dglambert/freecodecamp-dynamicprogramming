@@ -24,4 +24,8 @@ describe('canConstruct Test Suite', () => {
         expect(canConstruct('FooBar', ['Foo', 'Bar'])).toEqual(true);
     });
 
+    it('canConstruct_targetIsskateboardAndwordsArekate_sboard_ReturnsFalse', () => {
+        expect(canConstruct('skateboard', ['kate', 'sboard'])).toEqual(false);
+    });
+
 });

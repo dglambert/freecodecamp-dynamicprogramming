@@ -19,10 +19,10 @@ function canConstructBruteForce(target: string, wordBank: string[]) : boolean
 
     for(const word of wordBank)
     {
-        if(target.indexOf(word) > -1)
+        if(target.indexOf(word) == 0)
         {
-            target = target.replace(word, "");
-            return canConstruct(target, wordBank);
+            const newTarget = target.replace(word, "");
+            return canConstruct(newTarget, wordBank);
         }
     }
     return false;
