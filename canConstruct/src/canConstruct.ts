@@ -1,7 +1,10 @@
+import { IStringIndexBooleanDictionary } from "./IStringIndexBooleanDictionary";
 
 export function canConstruct(target: string, wordBank: string[]) : boolean
 {
-    return canConstructBruteForce(target, wordBank);
+    //return canConstructBruteForce(target, wordBank);
+    const memo = {};
+    return canConstructMemoized(target, wordBank, memo);
 }
 
 // m = target.length
@@ -22,11 +25,42 @@ function canConstructBruteForce(target: string, wordBank: string[]) : boolean
         if(target.indexOf(word) == 0)
         {
             const suffix = target.replace(word, "");
-            if(canConstruct(suffix, wordBank))
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            if(canConstructBruteForce(suffix, wordBank))
             {
                 return true;
             }
         }
     }
     return false;
+}
+
+
+function canConstructMemoized(target: string, wordBank: string[], memo: IStringIndexBooleanDictionary) : boolean
+{
+    if(target in memo)
+    {
+        return memo[target];
+    }
+
+    if(target.length == 0)
+    {
+        return true;
+    }
+
+    for(const word of wordBank)
+    {
+        if(target.indexOf(word) == 0)
+        {
+            const suffix = target.replace(word, "");
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            if(canConstructMemoized(suffix, wordBank, memo))
+            {
+                memo[target] = true;
+                return memo[target];
+            }
+        }
+    }
+    memo[target] = false;
+    return memo[target];
 }

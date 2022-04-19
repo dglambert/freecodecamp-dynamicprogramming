@@ -35,7 +35,7 @@ describe('canConstruct Test Suite', () => {
     it('canConstruct_targetIseeeeeeeeeeeeeeeeeeeeeeeeeeeeefAndwordsAreee_eee_eeee_eeeee_eeeeee_ReturnsFalse', () => {
         const target = 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeef';
         const wordBank = ['e', 'ee', 'eee', 'eeee', 'eeeee', 'eeeeee'];
-        expect(canConstruct(target, wordBank)).toEqual(true);
+        expect(canConstruct(target, wordBank)).toEqual(false);
     });
 
 });
