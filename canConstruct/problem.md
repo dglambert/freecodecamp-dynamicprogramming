@@ -27,10 +27,10 @@ You may reuse elements of `wordBank` as many times as needed.
 - **T** - Test
 
 
-## Listen
+### Listen
 
 
-## Examples
+### Examples
 
 `canConstruct_targetIsFooAndwordsAreFoo_ReturnsTrue`
 ```
@@ -49,7 +49,7 @@ You may reuse elements of `wordBank` as many times as needed.
 ```
 
 
-## Brute Force
+### Brute Force
 
 ```
 canConstruct(target, wordBank)
@@ -66,4 +66,7 @@ canConstruct(target, wordBank)
 ```
 
 
+### Optimize
 
+Focus on the exponential bottle neck `O((n^m)*m)` in Brute Force solution. 
+- Reduce recursion w/ memoization
