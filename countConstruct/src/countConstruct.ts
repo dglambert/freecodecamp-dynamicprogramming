@@ -1,7 +1,6 @@
 
-function countConstruct(target: string, wordBank: string[]) : number
+export function countConstruct(target: string, wordBank: string[]) : number
 {
     return 1;
 }
 
-console.log(countConstruct("", []));
