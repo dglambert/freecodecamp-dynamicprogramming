@@ -1,7 +1,11 @@
+/// <reference types="@types/jest" />
+
+import {countConstruct} from '../src/countConstruct';
 
 describe('countConstruct Test Suite', () => {
 
-    it('true_equals_true', () => {
-        expect(true).toEqual(true);
+    it('countConstruct_targetIsEmptyString_Returns0', () => {
+        expect(countConstruct('', [])).toEqual(0);
     });
+
 });
