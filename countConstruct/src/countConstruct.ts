@@ -8,7 +8,10 @@ export function countConstruct(target: string, wordBank: string[]) : number
 }
 
 
-
+// m = target lenth
+// n = wordBank lenght
+// time: O(n*m^2)
+// space: O(m^2)
 function countConstructMemoized(target: string, wordBank: string[], memo: IStringIndexNumberDictionary) : number
 {
     if(target in memo)
