@@ -19,6 +19,9 @@ describe('countConstruct Test Suite', () => {
     it('countConstruct_targetIsfooAndwordsAref_oo_Returns1', () => {
         expect(countConstruct('foo', ['f', 'oo'])).toEqual(1);
     });
-    
+   
+    it('countConstruct_targetIsfooAndwordsAref_oo_fo_o_Returns2', () => {
+        expect(countConstruct('foo', ['f', 'oo', 'fo', 'o'])).toEqual(3);
+    });
 
 });

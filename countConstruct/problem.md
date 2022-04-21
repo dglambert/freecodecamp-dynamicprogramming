@@ -48,7 +48,7 @@ You may reuse elements of `wordBank` as many times as needed.
 ```
 ```
 
-`countConstruct_targetIsfooAndwordsAref_oo_fo_o_Returns2`
+`countConstruct_targetIsfooAndwordsAref_oo_fo_o_Returns3`
 ```
 ```
 
