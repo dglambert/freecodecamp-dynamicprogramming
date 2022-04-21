@@ -32,6 +32,25 @@ You may reuse elements of `wordBank` as many times as needed.
 
 ### Examples
 
-`countConstruct_targetIsEmptyString_Returns0`
+`countConstruct_targetIsfooAndwordsAreEmpty_Returns0`
 ```
 ```
+
+`countConstruct_targetIsEmptyString_Returns1`
+```
+```
+
+`countConstruct_targetIsfooAndwordsArefoo_Returns1`
+```
+```
+
+`countConstruct_targetIsfooAndwordsAref_oo_Returns1`
+```
+```
+
+`countConstruct_targetIsfooAndwordsAref_oo_fo_o_Returns2`
+```
+```
+
+
+
