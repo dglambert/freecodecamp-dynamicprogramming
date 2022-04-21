@@ -11,6 +11,10 @@ describe('countConstruct Test Suite', () => {
     it('countConstruct_targetIsfooAndwordsAreEmpty_Returns0', () => {
         expect(countConstruct('foo', [])).toEqual(0);
     });
+
+    it('countConstruct_targetIsfooAndwordsArefoo_Returns1', () => {
+        expect(countConstruct('foo', ['foo'])).toEqual(1);
+    });
     
 
 });
