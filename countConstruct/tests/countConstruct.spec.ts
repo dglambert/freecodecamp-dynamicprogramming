@@ -20,8 +20,14 @@ describe('countConstruct Test Suite', () => {
         expect(countConstruct('foo', ['f', 'oo'])).toEqual(1);
     });
    
-    it('countConstruct_targetIsfooAndwordsAref_oo_fo_o_Returns2', () => {
+    it('countConstruct_targetIsfooAndwordsAref_oo_fo_o_Returns3', () => {
         expect(countConstruct('foo', ['f', 'oo', 'fo', 'o'])).toEqual(3);
+    });
+
+    it('canConstruct_targetIseeeeeeeeeeeeeeeeeeeeeeeeeeeeefAndwordsAreee_eee_eeee_eeeee_eeeeee_Returns0', () => {
+        const target = 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeef';
+        const wordBank = ['e', 'ee', 'eee', 'eeee', 'eeeee', 'eeeeee'];
+        expect(countConstruct(target, wordBank)).toEqual(0);
     });
 
 });
