@@ -52,5 +52,34 @@ You may reuse elements of `wordBank` as many times as needed.
 ```
 ```
 
+### Brute Foce 
+
+```
+m = target length
+n = word bank length
+time complexity: O((n^m)*m)
+space complexity: O(m^2)
+```
+
+```
+countConstruct(target, wordBank)
+    if target length is 0
+        return 1
+    
+    count = 0
+
+    for each word in wordbank
+        if target starts with word
+            remainder equals target - word
+            count = count + countConstruct(remaineder, wordBank)
+    
+    return count
+```
+
+### Optimize
+
+Focus on the exponential bottle neck `O((n^m)*m)` in Brute Force solution. 
+- Reduce recursion w/ memoization - `est: O(n*m^2)`
+
 
 
