@@ -6,4 +6,8 @@ describe('allConstruct Test Suite', () => {
         expect(allConstruct("", [])).toEqual([[]]);
     });
 
+    it('allConstruct_targetIsfooAndwordsArefoo_Returnsfoo', () => {
+        expect(allConstruct('foo', ['foo'])).toEqual([['foo']]);
+    });
+
 });
