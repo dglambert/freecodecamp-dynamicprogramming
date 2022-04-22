@@ -1,9 +1,8 @@
 
-function allConstruct(target: string, wordBank: string[]) : string[][]
+export function allConstruct(target: string, wordBank: string[]) : string[][]
 {
     let results: string[][] = [[]];
     results[0][0] = "";
     return results;    
 }
 
-console.log(allConstruct("", []));
