@@ -19,12 +19,11 @@ export function allConstruct(target: string, wordBank: string[]) : string[][] | 
                 let constructed : string[] = [ word, ...temp[0]];
                 if(results == null)
                 {
-                    results = [[]];
+                    results = [];
                 }
-                results[0] = constructed;    
+                results = [...results, constructed];    
             }
         }
-
     }
     return results;    
 }
