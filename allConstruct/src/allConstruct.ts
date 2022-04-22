@@ -8,7 +8,7 @@ export function allConstruct(target: string, wordBank: string[]) : string[][] | 
 
     let results: string[][] | null = null;
 
-    for(let word of wordBank)
+    for(const word of wordBank)
     {
         if(target.indexOf(word) == 0)
         {
@@ -16,7 +16,7 @@ export function allConstruct(target: string, wordBank: string[]) : string[][] | 
             const temp: string[][] | null = allConstruct(suffix, wordBank);
             if(temp !== null)
             {
-                let constructed : string[] = [ word, ...temp[0]];
+                const constructed : string[] = [ word, ...temp[0]];
                 if(results == null)
                 {
                     results = [];
