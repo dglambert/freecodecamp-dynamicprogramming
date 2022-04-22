@@ -1,9 +1,9 @@
-
+import {allConstruct} from '../src/allConstruct';
 
 describe('allConstruct Test Suite', () => {
 
-    it('true_equals_true', () => {
-        expect(true).toEqual(true);
+    it('allConstruct_targetIsEmptyString_ReturnsEmpty2DArray', () => {
+        expect(allConstruct("", [])).toEqual([[]]);
     });
 
 });

@@ -26,3 +26,25 @@ You may reuse elements of `wordBank` as many times as needed.
 - **W** - Walkthrough
 - **I** - Implement
 - **T** - Test
+
+### Listen
+
+
+### Examples
+
+`allConstruct_targetIsEmptyString_ReturnsEmpty2DArray`
+```
+```
+
+`allConstruct_targetIsfooAndwordsArefoo_Returnsfoo`
+```
+```
+
+`allConstruct_targetIsfooAndwordsAref_oo_Returnsf_oo`
+```
+```
+
+`allConstruct_targetIsfooAndwordsArefo_o_f_Returnsfo_o__f_o_o`
+```
+```
+
