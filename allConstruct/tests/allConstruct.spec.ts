@@ -26,4 +26,10 @@ describe('allConstruct Test Suite', () => {
         expect(allConstruct('foo', ['fo', 'o', 'f'])).toEqual([['fo', 'o'], ['f', 'o', 'o']]);
     });
 
+    // it('canConstruct_targetIseeeeeeeeeeeeeeeeeeeeeeeeeeeeefAndwordsAreee_eee_eeee_eeeee_eeeeee_ReturnsNull', () => {
+    //     const target = 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeef';
+    //     const wordBank = ['e', 'ee', 'eee', 'eeee', 'eeeee', 'eeeeee'];
+    //     expect(allConstruct(target, wordBank)).toEqual(null);
+    // });
+
 });
