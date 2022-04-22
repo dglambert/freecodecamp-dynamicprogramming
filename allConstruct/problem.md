@@ -40,6 +40,10 @@ You may reuse elements of `wordBank` as many times as needed.
 ```
 ```
 
+`allConstruct_targetIsfooAndwordsAreEmptyArray_ReturnsNull`
+```
+```
+
 `allConstruct_targetIsfooAndwordsAref_oo_Returnsf_oo`
 ```
 ```
@@ -48,3 +52,21 @@ You may reuse elements of `wordBank` as many times as needed.
 ```
 ```
 
+### Brute Force
+
+```
+allConstruct(target, wordBank)
+    if target is empty
+        return [[]]
+
+    matches : [][] = [][]
+
+    foreach word in wordBank
+        if target.IndexOf word == 0
+            suffix = target starting at word.length
+            constructed = allConstruct(suffix, wordBank)
+            if(constructed is not null)
+                add suffix to constructed[]
+                add constructed to matches              
+    return matches
+```
