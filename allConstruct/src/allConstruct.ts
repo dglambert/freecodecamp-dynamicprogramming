@@ -16,7 +16,7 @@ export function allConstruct(target: string, wordBank: string[]) : string[][] | 
             const temp: string[][] | null = allConstruct(suffix, wordBank);
             if(temp !== null)
             {
-                let constructed : string[] = [...temp[0], target];
+                let constructed : string[] = [ word, ...temp[0]];
                 if(results == null)
                 {
                     results = [[]];
