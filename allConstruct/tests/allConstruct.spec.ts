@@ -18,4 +18,12 @@ describe('allConstruct Test Suite', () => {
         expect(allConstruct('foo', ['f', 'oo'])).toEqual([['f', 'oo']]);
     });
 
+    it('allConstruct_targetIsfooAndwordsArefo_o_Returnsfo_o', () => {
+        expect(allConstruct('foo', ['fo', 'o'])).toEqual([['fo', 'o']]);
+    });
+
+    it('allConstruct_targetIsfooAndwordsArefo_o_f_Returnsfo_o__f_o_o', () => {
+        expect(allConstruct('foo', ['fo', 'o', 'f'])).toEqual([['fo', 'o'], ['f', 'o', 'o']]);
+    });
+
 });
