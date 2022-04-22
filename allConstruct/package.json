@@ -12,6 +12,7 @@
     "test": "jest --coverage",
     "build": "npm run lint && npm run test && npx tsc",
     "run": "node .\\dist\\main.js",
-    "buildandrun": "npm run build && npm run run"
+    "buildandrun": "npm run build && npm run run",
+    "test:watch": "jest --watch"
   }
 }
