@@ -10,4 +10,8 @@ describe('allConstruct Test Suite', () => {
         expect(allConstruct('foo', ['foo'])).toEqual([['foo']]);
     });
 
+    it('allConstruct_targetIsfooAndwordsArefoo_Returnsfoo', () => {
+        expect(allConstruct('foo', [])).toEqual(null);
+    });
+
 });
