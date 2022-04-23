@@ -6,7 +6,7 @@ export function allConstruct(target: string, wordBank: string[]) : string[][]
 
 // m = target length
 // n = wordBank length
-// time: O((n^m)*m^3)
+// time: O((n^m)*m^4)
 // space: O(m^4)
 function bruteForceAllConstruct(target: string, wordBank: string[]) : string[][]
 {

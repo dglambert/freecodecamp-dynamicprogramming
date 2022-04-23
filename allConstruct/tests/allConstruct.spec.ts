@@ -26,7 +26,6 @@ describe('allConstruct Test Suite', () => {
         expect(allConstruct('foo', ['fo', 'o', 'f'])).toEqual([['fo', 'o'], ['f', 'o', 'o']]);
     });
 
-    // 2 52 45
     it('allConstruct_targetIsabcdefAndwordsAreab_abc_cd_def_abcd_ef_c_Returns_ab_cd_ef__ab_c_def__abc_def__abcd_ef', () => {
         const target = 'abcdef';
         const wordBank = ['ab', 'abc', 'cd', 'def', 'abcd', 'ef', 'c'];
