@@ -38,6 +38,16 @@ describe('allConstruct Test Suite', () => {
         expect(allConstruct(target, wordBank)).toEqual(expected);
     });
 
+    it('allConstruct_targetIspurpleAndwordsArepurp_p_ur_le_purpl_Returns_purp_le__p_ur_p_le', () => {
+        const target = 'purple';
+        const wordBank = ['purp', 'p', 'ur', 'le', 'purpl'];
+        const expected = [
+                ['purp', 'le']
+                , ['p', 'ur', 'p', 'le']
+            ];
+        expect(allConstruct(target, wordBank)).toEqual(expected);
+    });
+
     // it('canConstruct_targetIseeeeeeeeeeeeeeeeeeeeeeeeeeeeefAndwordsAreee_eee_eeee_eeeee_eeeeee_ReturnsNull', () => {
     //     const target = 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeef';
     //     const wordBank = ['e', 'ee', 'eee', 'eeee', 'eeeee', 'eeeeee'];
