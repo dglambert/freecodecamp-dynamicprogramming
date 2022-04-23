@@ -22,14 +22,10 @@ function bruteForceAllConstruct(target: string, wordBank: string[]) : string[][]
         if(target.indexOf(word) == 0)
         {
             const suffix = target.slice(word.length);
-            const temp: string[][] = bruteForceAllConstruct(suffix, wordBank);
-            if(temp !== null)
+            const temps: string[][] = bruteForceAllConstruct(suffix, wordBank);
+            for(const temp of temps)
             {
-                const constructed : string[] = [ word, ...temp[0]];
-                if(results == null)
-                {
-                    results = [];
-                }
+                const constructed : string[] = [ word, ...temp];
                 results = [...results, constructed];    
             }
         }

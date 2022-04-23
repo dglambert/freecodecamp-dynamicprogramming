@@ -26,6 +26,19 @@ describe('allConstruct Test Suite', () => {
         expect(allConstruct('foo', ['fo', 'o', 'f'])).toEqual([['fo', 'o'], ['f', 'o', 'o']]);
     });
 
+    // 2 52 45
+    it('allConstruct_targetIsabcdefAndwordsAreab_abc_cd_def_abcd_ef_c_Returns_ab_cd_ef__ab_c_def__abc_def__abcd_ef', () => {
+        const target = 'abcdef';
+        const wordBank = ['ab', 'abc', 'cd', 'def', 'abcd', 'ef', 'c'];
+        const expected = [
+                ['ab', 'cd', 'ef']
+                , ['ab', 'c', 'def']
+                , ['abc', 'def']
+                , ['abcd', 'ef']
+            ];
+        expect(allConstruct(target, wordBank)).toEqual(expected);
+    });
+
     // it('canConstruct_targetIseeeeeeeeeeeeeeeeeeeeeeeeeeeeefAndwordsAreee_eee_eeee_eeeee_eeeeee_ReturnsNull', () => {
     //     const target = 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeef';
     //     const wordBank = ['e', 'ee', 'eee', 'eeee', 'eeeee', 'eeeeee'];
