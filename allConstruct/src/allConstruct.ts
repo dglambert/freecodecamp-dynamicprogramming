@@ -1,6 +1,15 @@
 
 export function allConstruct(target: string, wordBank: string[]) : string[][] | null
 {
+    return bruteForceAllConstruct(target, wordBank);    
+}
+
+// m = target length
+// n = wordBank length
+// time: O((n^m)*m^3)
+// space: O(m^4)
+function bruteForceAllConstruct(target: string, wordBank: string[]) : string[][] | null
+{
     if(target.length == 0)
     {
         return [[]];
@@ -13,7 +22,7 @@ export function allConstruct(target: string, wordBank: string[]) : string[][] | 
         if(target.indexOf(word) == 0)
         {
             const suffix = target.slice(word.length);
-            const temp: string[][] | null = allConstruct(suffix, wordBank);
+            const temp: string[][] | null = bruteForceAllConstruct(suffix, wordBank);
             if(temp !== null)
             {
                 const constructed : string[] = [ word, ...temp[0]];
@@ -25,6 +34,5 @@ export function allConstruct(target: string, wordBank: string[]) : string[][] | 
             }
         }
     }
-    return results;    
+    return results;
 }
-
