@@ -1,3 +1,6 @@
+// n = n
+// time: O(n) aka linear 
+// space: O(n) aka linear
 export function fibTabulation(n: number) : number 
 {
     const table: number[] = new Array<number>(n+1).fill(0);
