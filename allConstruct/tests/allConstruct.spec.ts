@@ -48,7 +48,7 @@ describe('allConstruct Test Suite', () => {
         expect(allConstruct(target, wordBank)).toEqual(expected);
     });
 
-    it('canConstruct_targetIseeeeeeeeeeeeeeeeeeeeeeeeeeeeefAndwordsAreee_eee_eeee_eeeee_eeeeee_ReturnsEmptyArray', () => {
+    it('allConstruct_targetIseeeeeeeeeeeeeeeeeeeeeeeeeeeeefAndwordsAreee_eee_eeee_eeeee_eeeeee_ReturnsEmptyArray', () => {
         const target = 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeef';
         const wordBank = ['e', 'ee', 'eee', 'eeee', 'eeeee', 'eeeeee'];
         expect(allConstruct(target, wordBank)).toEqual([]);
